@@ -28,7 +28,7 @@ class Text extends React.Component {
 
     focusInputText() {
         this.inputText.current.focus();
-        console.log(this.inputText)
+        console.log('ref',this.inputText)
     }
 
 
@@ -36,7 +36,7 @@ class Text extends React.Component {
         return (
             <>
                 <input style={{width: 300}} type="text" ref={this.inputText}
-                       value={this.props.value ? this.props.value : `Ref for DOM - will focus after clicking on 'Text btn'`} /> <br />
+                       defaultValue={this.props.value ? this.props.value : `Ref for DOM - will focus after clicking on 'Text btn'`} /> <br />
                 <Button theme={this.context} name="Text btn" onClick={this.focusInputText} />
             </>
         )
