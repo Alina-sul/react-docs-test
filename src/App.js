@@ -5,16 +5,18 @@ const Home = React.lazy(() => import('./routes/Home'));
 const About = React.lazy(() => import('./routes/About'));
 
 function App() {
+  //console.log(ThemeContext)
   return (
     <>
-      <Router>
-        <Suspense fallback={<div>Loading...</div>}>
-          <Switch>
-            <Route exact path="/" component={Home}/>
-            <Route exact path="/about" component={About}/>
-          </Switch>
-        </Suspense>
-      </Router>
+          <Router>
+            <Suspense fallback={<div>Loading...</div>}>
+              <Switch>
+                <Route exact path="/" component={Home}/>
+                <Route exact path="/about" component={About}/>
+              </Switch>
+            </Suspense>
+          </Router>
+
     </>
   );
 }
